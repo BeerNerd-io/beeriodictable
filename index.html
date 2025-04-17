@@ -2,20 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/beer.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="An interactive Beeriodic Table of brewing elements" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Explore the science of brewing with our interactive Beeriodic Table. Learn about essential brewing elements, processes, and measurements." />
     <meta name="theme-color" content="#3B82F6" />
-    <title>The Beeriodic Table</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Beeriodic" />
+    
+    <link rel="icon" type="image/svg+xml" href="/beer.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/beer.svg" color="#3B82F6" />
+    
+    <title>The Beeriodic Table - Interactive Brewing Elements Guide</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://beernerd-io.github.io/beeriodictable/" />
+    <meta property="og:title" content="The Beeriodic Table" />
+    <meta property="og:description" content="Explore the science of brewing with our interactive Beeriodic Table. Learn about essential brewing elements, processes, and measurements." />
+    <meta property="og:image" content="https://beernerd-io.github.io/beeriodictable/screenshot1.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://beernerd-io.github.io/beeriodictable/" />
+    <meta property="twitter:title" content="The Beeriodic Table" />
+    <meta property="twitter:description" content="Explore the science of brewing with our interactive Beeriodic Table. Learn about essential brewing elements, processes, and measurements." />
+    <meta property="twitter:image" content="https://beernerd-io.github.io/beeriodictable/screenshot1.png" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <div style="padding: 2rem; text-align: center;">
+        Please enable JavaScript to use the Beeriodic Table.
+      </div>
+    </noscript>
   </body>
 </html> 

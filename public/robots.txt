@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beernerd-io.github.io/beeriodictable/sitemap.xml 
