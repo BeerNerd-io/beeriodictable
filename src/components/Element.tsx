@@ -8,12 +8,12 @@ interface ElementProps {
 
 export const Element = ({ element, onClick }: ElementProps) => {
   const categoryColors = {
-    base: 'bg-base',
-    variable: 'bg-variable',
-    measurement: 'bg-measurement',
-    microbe: 'bg-microbe',
-    process: 'bg-process',
-    flavor: 'bg-flavor',
+    base: 'text-base border-base/50',
+    variable: 'text-variable border-variable/50',
+    measurement: 'text-measurement border-measurement/50',
+    microbe: 'text-microbe border-microbe/50',
+    process: 'text-process border-process/50',
+    flavor: 'text-flavor border-flavor/50',
   };
 
   return (
@@ -21,20 +21,20 @@ export const Element = ({ element, onClick }: ElementProps) => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className={`
-        w-24 h-24 p-2 rounded-lg shadow-lg cursor-pointer
+        element-card
+        w-full aspect-square p-3 rounded-xl
         ${categoryColors[element.category]}
-        text-white flex flex-col items-center justify-center
-        transition-all duration-200
-        hover:shadow-xl
+        flex flex-col items-center justify-center
+        cursor-pointer select-none
       `}
       onClick={onClick}
       role="button"
       aria-label={`${element.name} element`}
       tabIndex={0}
     >
-      <div className="text-2xl font-bold">{element.symbol}</div>
-      <div className="text-sm text-center">{element.name}</div>
-      <div className="text-xs mt-1">{element.atomicNumber}</div>
+      <div className="text-3xl font-bold mb-1">{element.symbol}</div>
+      <div className="text-sm text-center font-medium opacity-90">{element.name}</div>
+      <div className="text-xs mt-2 opacity-75">{element.atomicNumber}</div>
     </motion.div>
   );
 }; 

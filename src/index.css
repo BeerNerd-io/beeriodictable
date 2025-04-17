@@ -4,16 +4,35 @@
 
 @layer base {
   html {
-    @apply antialiased;
+    @apply antialiased bg-gray-900;
   }
   
   body {
-    @apply bg-gray-50 text-gray-900;
+    @apply text-gray-100 min-h-screen;
+    background: radial-gradient(circle at center, #1F2937 0%, #111827 100%);
   }
 }
 
 @layer components {
   .element-card {
-    @apply transition-all duration-200 hover:shadow-lg;
+    @apply relative overflow-hidden backdrop-blur-sm bg-opacity-20 border border-gray-700;
+    transition: all 0.3s ease;
+  }
+
+  .element-card:hover {
+    @apply border-current;
+    transform: translateY(-2px);
+  }
+
+  .element-card::before {
+    content: '';
+    @apply absolute inset-0 opacity-10 bg-current;
+    z-index: -1;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    @apply bg-white bg-opacity-10 backdrop-blur-md border border-white border-opacity-20;
   }
 } 
